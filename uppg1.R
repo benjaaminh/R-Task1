@@ -21,11 +21,24 @@ medelvärden_rader <- apply(normaliserad_data, 1, mean, na.rm = TRUE) #ger medel
 
 medianer_rader <- apply(normaliserad_data, 1, median, na.rm = TRUE) #median för alla individuella rader
 
+minimum_each_row <- apply(normaliserad_data, 1, min, na.rm = TRUE) #minimum value for each row
+
+maximum_each_row <- apply(normaliserad_data, 1, max, na.rm = TRUE) #maximum value for each row
+
+standarddeviation_each_row <- apply(normaliserad_data, 1, sd, na.rm = TRUE) #standard deviation for each row
+
+standard_deviation <- sd(standarddeviation_each_row)
+
+min <- min(minimum_each_row)
+
+max <- max(maximum_each_row)
+
 median <- median(medianer_rader) #medianvärdet
 
 medelvärde <- mean(medelvärden_rader) #ger medelvärdet av alla rader
 
 #print(summary(normaliserad_data))
-print(medelvärde_rad)
+cat("Medelvärde av SUS-resultaten:", medelvärde, "\n")
+
 
 
