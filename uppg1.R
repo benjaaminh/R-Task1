@@ -9,6 +9,10 @@ specifik_rad_värden <- as.numeric(specifik_rad[])
 
 medelvärde_rad <- mean(specifik_rad_värden)
 
-print(medelvärde_rad)
+medelvärden_rader <- apply(data, 1, mean, na.rm = TRUE) #ger medelvärdet av varje individuell rad
+
+medelvärde <- mean(medelvärden_rader) #ger medelvärdet av alla rader
+
+print(medelvärde)
 
 
