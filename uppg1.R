@@ -1,4 +1,6 @@
-data <- read.csv("SUSsvarNy23.csv", sep=";")
+#TODO: check if there is a better way of normalizing data, check if there is a better way of retrieving median, mean etc..
+
+data <- read.csv("SUSsvarNy23.csv", sep=";")#read data and define semicolon as separator
 
 # limits for normalized data 0-100
 new_min <- 0
