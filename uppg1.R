@@ -17,7 +17,7 @@ medelvärde_rad <- mean(specifik_rad_värden)
 
 median_rad <- median(specifik_rad_värden)
 
-medelvärden_rader <- apply(normaliserad_data, 1, mean, na.rm = TRUE) #ger medelvärdet av varje individuell rad
+medelvärden_rader <- apply(normaliserad_data, 1, mean, na.rm = TRUE)    # ger medelvärdet av varje individuell rad
 
 medianer_rader <- apply(normaliserad_data, 1, median, na.rm = TRUE) #median för alla individuella rader
 
@@ -33,9 +33,9 @@ min <- min(minimum_each_row)
 
 max <- max(maximum_each_row)
 
-median <- median(medianer_rader) #medianvärdet
+median <- median(medianer_rader)        # medianvärdet
 
-medelvärde <- mean(medelvärden_rader) #ger medelvärdet av alla rader
+medelvärde <- mean(medelvärden_rader)   # ger medelvärdet av alla rader
 
 #print(summary(normaliserad_data))
 cat("Medelvärde av SUS-resultaten:", medelvärde, "\n")
