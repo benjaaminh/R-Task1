@@ -7,10 +7,9 @@ normalize_to_SUS <- function(row) {
     normalized_data <- (sum_odd + sum_even) * 2.5 #normalize all data
     return (normalized_data)
 }
-normalized_each_row <- apply(data, 1, normalize_to_SUS) #calculates SUS score for each row in dataset
+normalized_each_row <- apply(data, 1, normalize_to_SUS) #calculates SUS score for each row
 
-print(normalized_each_row)
-median <- median(normalized_each_row)        # calcluates the median of all rows
+median <- median(normalized_each_row)  # calcluates the median of all rows
 
 mean <- mean(normalized_each_row)   # calculates the mean value of all rows
 
